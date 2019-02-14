@@ -1,0 +1,90 @@
+/* Older browser support - .no-cssanimations class added by modernizr */
+.no-cssanimations .slideshow li {
+	opacity: 1;
+}
+
+body {
+  background-color: #000;
+}
+
+.bg-wtrd-color {
+    background-color: #3B3355;
+}
+
+.container{
+  margin-top: 10vh;
+}
+
+#landing-header {
+  text-align: center;
+  margin: 10vh 0;
+}
+
+.mission, .about, .schedule{
+  padding: 20vh 0;
+}
+
+#dev{
+  /* sets the developer portfolio link and logo to the right bottom of the viewport window */
+  /*position: absolute;
+  bottom: 0;*/
+  text-align: right;
+}
+#dev a{
+  color: skyblue;
+}
+#dev a:hover{
+  color: gray; /*change later*/
+  text-decoration: none;
+}
+
+
+@media screen and (min-width: 1000px){
+  .carousel-item img{
+      height: 85vh;
+    }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1000px) {
+    button.navbar-toggler {
+        position: absolute;
+        right: 10px;
+        top: 25px;
+    }
+
+    .carousel-item img{
+      height: 70vh;
+    }
+ }
+
+@media screen and (min-width: 800px) and (max-width: 900px) {
+    button.navbar-toggler {
+        position: absolute;
+        right: 10px;
+        top: 25px;
+    }
+ }
+
+@media screen and (min-width: 700px) and (max-width: 800px) {
+    button.navbar-toggler {
+        position: absolute;
+        right: 10px;
+        top: 20px;
+    }
+ }
+
+ @media screen and (min-width: 600px) and (max-width: 700px) {
+    button.navbar-toggler {
+        position: absolute;
+        right: 10px;
+        top: 15px;
+    }
+ }
+
+  @media screen and (max-width: 600px) {
+    button.navbar-toggler {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+  }

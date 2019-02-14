@@ -1,0 +1,259 @@
+/*
+#9370DB purple
+#228B22 forest green
+#808B96 gray blue
+#8BB1D7 light blue gray
+
+#000 black primary-text-color
+#A8A8A8 light grey primary-background-color
+#3B3355 dark purple navbar-color
+#A79AB7 light purple primary-headers-link-colors
+#BFCDE0 light blue ky-logo-color
+
+mediumpurple    #9370DB rgb(147,112,219)
+blueviolet	#8A2BE2	rgb(138,43,226)
+darkviolet	#9400D3	rgb(148,0,211)
+*/
+
+
+/* Older browser support - .no-cssanimations class added by modernizr */
+.no-cssanimations .slideshow li {
+	opacity: 1;
+}
+
+html{
+	background-color: #000;
+	background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
+	height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 2px;
+} 
+body{
+  background-color: #A8A8A8 !important;
+  font-family: 'Antic', sans-serif !important;
+}
+
+/**
+Navigation 
+**/
+.navbar{
+	font-family: 'Baloo Da', cursive !important;
+}
+.navbar-brand{
+	font-family: "Bungee" !important;
+}
+
+.bg-wtrd-color {
+    background-color: #3B3355;
+}
+.dividerColor{
+	color: #000;
+	font-size: xx-large;
+}
+
+
+p a{
+	color: #9370DB;
+}
+p a:hover{
+	color: #3B3355;
+	text-decoration: none;
+}
+
+
+.section1, .section3, .happenings, .scheduleSection, .practiceSection, .expectSection, .safetySection,
+.sponsorSection, .benefitsSection, .beSponsorSection{
+	margin: 10vh;
+}
+#landing-header {
+  text-align: center;
+  margin: 10vh 0;
+}
+.seasonSchedule{
+	margin-top: 10vh;
+}
+.eventHow{
+	margin-top: 5vh;
+}
+
+.imageSections{
+	position: relative;
+}
+.imageSections img{
+	max-height: 30em;
+}
+.overlay1{
+	height: 100%;
+}
+.imageSections .overlay1{
+	position: absolute;
+	bottom: 0;
+	background-color: rgb(148,0,211);
+	background-color: rgba(148,0,211,0.50);
+	mix-blend-mode: multiply;
+	width: 100%;
+}
+.headerImages{
+	object-fit: cover;
+	height: 15em;
+}
+
+.section3 .about{
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.happenings{
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+.eventImage{
+	margin-left: -2%;
+	margin-right: 0;
+}
+.eventInfo{
+	margin: 10vh 0;
+}
+
+/**
+Social Media and Contact Form
+**/
+footer{
+	padding-top: 5vh;
+	background-color: #000;
+	background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
+	color: #3B3355;
+	font-size: 1em;
+}
+.social a{
+	color: #3B3355;
+}
+.social a:hover{
+	color: #555;
+}
+.social i{
+	margin-top: 1em;
+	padding: .5em;
+}
+.wtrdLogo{
+	height: 40vh;
+}
+form{
+	margin-left: 5vw;
+}
+.submitButton{
+	margin-left: 1em;
+}
+.form-control{ 
+  background-color: dimgrey !important; 
+  border-color: dimgrey !important;
+  color: #3B3355 !important;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #9370DB !important;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #9370DB !important;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #9370DB !important;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #9370DB !important;
+}
+.g-recaptcha{
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+
+/**
+Dev Link 
+**/
+#dev a{
+  color: skyblue;
+}
+#dev a:hover{
+  color: gray; /*change later*/
+  text-decoration: none;
+}
+
+/**
+Media Queries
+**/
+@media screen and (min-width: 1000px){
+  .carousel-item img{
+      height: 85vh;
+    }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1000px) {
+    button.navbar-toggler {
+        position: absolute;
+        right: 10px;
+        top: 25px;
+    }
+    .carousel-item img{
+      height: 70vh;
+    }
+    form{
+    	margin-left: 15em;
+    }
+ }
+
+@media screen and (min-width: 800px) and (max-width: 900px) {
+    button.navbar-toggler {
+        position: absolute;
+        right: 10px;
+        top: 25px;
+    }
+    .eventImage{
+        display: none;
+    }
+    form{
+    	margin-left: 15em;
+    }
+ }
+
+@media screen and (min-width: 700px) and (max-width: 800px) {
+    button.navbar-toggler {
+        position: absolute;
+        right: 10px;
+        top: 20px;
+    }
+    .largeDisplay, .eventImage{
+        display: none;
+    }
+    form{
+    	margin-left: 15em;
+    }
+ }
+
+ @media screen and (min-width: 600px) and (max-width: 700px) {
+    button.navbar-toggler {
+        position: absolute;
+        right: 10px;
+        top: 15px;
+    }
+    .largeDisplay, .eventImage{
+        display: none;
+    }
+    form{
+    	margin-left: 10em;
+    }
+ }
+
+  @media screen and (max-width: 600px) {
+    button.navbar-toggler {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+    .largeDisplay, .eventImage{
+        display: none;
+    }
+    form{
+    	margin-right: 2em;
+    }
+  }

@@ -1,0 +1,28 @@
+<!-- 
+This file is to create the rss feed to be able to auto post to facebook and LinedIn using a third party 
+application, obviously for now. 
+-->
+
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+	<channel>
+		<title>Blog of the Week</title> <!-- Remains the same -->
+		<link>[website link]</link> <!-- Remains the same -->
+		<description>Weekly Blog</description> <!-- Remains the same -->
+		<language>en-us</language> <!-- Remains the same -->
+		<image> <!-- Remains the same -->
+			<title>Blog of the Week</title>
+			<link>[website link]</link>
+			<url>[url link to image/logo]</url>
+			<width></width>
+			<height></height>
+		</image>
+		<item> <!-- Changes each posting -->
+			<title></title>
+			<pubDate></pubDate>
+			<link>[link to blog post]</link>
+			<description><![CDATA[Visit this <a href="">Blog Post</a>]]></description>
+			<author>email Link</author>
+		</item>
+	</channel>
+</rss>

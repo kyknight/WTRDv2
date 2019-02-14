@@ -1,0 +1,92 @@
+/*
+#9370DB purple
+#228B22 forest green
+#808B96 gray blue
+#8BB1D7 light blue gray
+
+#000 black primary-text-color
+#A8A8A8 light grey primary-background-color
+#3B3355 dark purple navbar-color
+#A79AB7 light purple primary-headers-link-colors
+#BFCDE0 light blue ky-logo-color
+
+mediumpurple    #9370DB rgb(147,112,219)
+*/
+
+html, body, #credit{
+    background-color: #000 !important;
+}
+
+/* LOOK AT THIS!!! */
+h3 {
+    font-family: 'Antic', sans-serif !important;
+    font-size: 30px !important;
+    color: #3B3355 !important;
+}
+
+p {
+    font-family: 'Antic', sans-serif;
+    font-size: 20px;
+}
+
+article {
+    font-family: 'Antic', sans-serif;
+    font-size: 16px;
+}
+
+.container{
+    background-color: #A8A8A8;
+    padding-top: 5em;
+}
+
+.bg-wtrd-color {
+    background-color: #3B3355;
+}
+
+#credit a{
+	text-align: right;
+	font-size:12px; 
+	color: #8BB1D7; 
+	padding-right:10px;
+}
+
+#credit a:hover {
+    text-decoration: none;
+}
+
+@media screen and (min-width: 800px) and (max-width: 1000px) {
+    button.navbar-toggler {
+        position: absolute;
+        right: 10px;
+        top: 25px;
+    }
+ }
+
+@media screen and (min-width: 700px) and (max-width: 800px) {
+    button.navbar-toggler {
+        position: absolute;
+        right: 10px;
+        top: 20px;
+    }
+ }
+
+ @media screen and (min-width: 600px) and (max-width: 700px) {
+    button.navbar-toggler {
+        position: absolute;
+        right: 10px;
+        top: 15px;
+    }
+ }
+
+  @media screen and (max-width: 600px) {
+    button.navbar-toggler {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+
+    #logo {
+        width: 12%;
+        height: auto;
+    }
+ }
