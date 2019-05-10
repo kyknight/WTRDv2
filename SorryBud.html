@@ -1,0 +1,91 @@
+<!-- SORRY BUD
+	This page will display if there is no facebook event and will allow the user to generate quotes.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sorry Bud</title>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  	<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  	<link rel="stylesheet" type="text/css" href="styles/nope.css">
+
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+        <!-- SemanticUI source code -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Antic|Ubuntu+Condensed" rel="stylesheet">
+
+            <!-- browser icon -->
+  <!--<link rel="shortcut icon" href="./images/sadFaceFavicon/favicon.ico" type="image/x-icon" />-->
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/okayFavicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/okayFavicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/okayFavicon/favicon-16x16.png">
+  <link rel="manifest" href="./images/okayFavicon/site.webmanifest">
+</head>
+<body>
+	<div class="sorryBudMessage">
+		<h4 class="row justify-content-center">Sorry, bud. Currently, there is no facebook event created for the event.</h4>
+		<h4 class="row justify-content-center">Anyways.... Do you want to read at some quotes?</h4>
+		<a href="index.php" alt="Sad Day" class="row justify-content-center"><button class="ui red button">Nope</button></a>
+
+	</div>
+	<h1 class='header'>Get Some Quotes!</h1>
+
+	<div class="ui four column centered grid">
+      <div class="quoteBox">
+        <p class="quoteT"></p>
+        <p class="author"></p>
+      </div>
+      <div class="four column centered row">
+        <div class="newQuote ui animated button">
+          <div class="visible content">New Quote</div>
+          <div class="hidden content">
+            <i id="quote" class='large hand spock icon'></i>
+          </div>
+        </div> 
+          <a class="twitterButton" href="https://twitter.com/intent/tweet" data-size="large" target="_blank">
+            <button class="ui circular twitter icon button">
+              <i class="twitter icon"></i>
+            </button>
+          </a>
+      </div>
+    </div>
+</body>
+
+<footer>
+	<div class="col col-12 mr-auto" id="dev">
+    	<p><small><a href="https://kyknight.github.io/" target="_blank"><img src="./images/PhoeWorks_Logo.png" width = 40em height = 40em>PhoeWorks</a></small></p>
+  	</div>
+</footer>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+<script> 
+	var url = "https://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=jsonp&lang=en&jsonp=?";
+	var getQuote = function(data) {
+  		$(".quoteT").text(data.quoteText);
+  		var quot = 'https://twitter.com/intent/tweet?text=' + data.quoteText + ' Author ' + data.quoteAuthor + 'https://kyknight.github.io/';
+  		if (data.quoteAuthor === '') {
+    		data.quoteAuthor = 'Unknown';
+  		}
+  		$(".author").text('Author: ' + data.quoteAuthor);
+  		$(".twitterButton").attr("href", quot);
+	};
+	$(document).ready(function() {
+  		$.getJSON(url, getQuote, 'jsonp');
+	});
+	$("#quote").click(function() {
+  		$.getJSON(url, getQuote, 'jsonp');
+	});
+</script>
+</html>
